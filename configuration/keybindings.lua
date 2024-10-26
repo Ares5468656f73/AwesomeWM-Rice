@@ -25,6 +25,9 @@ local awful = require("awful")
 ]]
 
 modkey = "Mod4"
+alt = "Mod1"
+ctrl = "Control"
+shift = "Shift"
 terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
@@ -69,7 +72,7 @@ globalkeys = gears.table.join(
   ),
 
   awful.key(
-    { modkey }, 'l',
+    { modkey, alt }, 'l',
     function ()
       awful.tag.incmwfact( 0.05)
     end,
@@ -77,7 +80,7 @@ globalkeys = gears.table.join(
   ), 
 
   awful.key(
-    { modkey }, 'h',
+    { modkey, alt }, 'h',
     function ()
       awful.tag.incmwfact(-0.05)
     end,
@@ -85,7 +88,7 @@ globalkeys = gears.table.join(
   ), 
 
   awful.key(
-    { modkey, 'Control' }, 'q',
+    { modkey, ctrl }, 'q',
     function ()
       local c = client.focus
       if c then
@@ -121,7 +124,7 @@ globalkeys = gears.table.join(
   ),
   
   awful.key(
-    { modkey }, "l",
+    { modkey }, "e",
     function ()
         awful.layout.inc(1) -- Cambia al siguiente layout
     end,

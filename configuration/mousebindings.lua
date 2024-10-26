@@ -28,7 +28,7 @@ mousebindings = gears.table.join(
     awful.button(
       { }, 3, -- That 3 equals to left click
       function () 
-        awesome.spawn(terminal)
+        awesome.spawn(mylauncher)
       end
     )
 )
